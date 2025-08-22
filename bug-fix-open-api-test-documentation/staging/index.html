@@ -4,21 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>OpenAPI Preview</title>
-  <!-- ✅ Load the standalone bundle, which creates the global ScalarApiReference -->
   <script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference/dist/browser/standalone.js"></script>
   <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      font-family: sans-serif;
-    }
+    html, body { margin: 0; padding: 0; height: 100%; }
   </style>
 </head>
 <body>
   <script>
-    // Start Scalar API Reference right after the script is loaded
-    ScalarApiReference({
+    window.ScalarApiReference?.({
       element: document.body,
       spec: './openapi.yaml'
     });
