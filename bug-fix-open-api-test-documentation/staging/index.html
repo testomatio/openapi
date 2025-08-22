@@ -1,1 +1,27 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>OpenAPI Preview</title><script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference"></script><style>body{margin:0;padding:0}</style></head><body><script>ScalarAPIReference({element:document.body,specUrl:'./openapi.yaml'})</script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OpenAPI Preview</title>
+  <!-- ✅ Load the standalone bundle, which creates the global ScalarApiReference -->
+  <script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference/dist/standalone.min.js"></script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    // Start Scalar API Reference right after the script is loaded
+    ScalarApiReference({
+      element: document.body,
+      spec: './openapi.yaml'
+    });
+  </script>
+</body>
+</html>
