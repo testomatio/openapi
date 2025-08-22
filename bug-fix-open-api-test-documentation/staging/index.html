@@ -4,16 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>OpenAPI Preview</title>
-  <script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference/dist/browser/standalone.js"></script>
+  <!-- вірний bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference/standalone.js"></script>
   <style>
     html, body { margin: 0; padding: 0; height: 100%; }
   </style>
 </head>
 <body>
   <script>
-    window.ScalarApiReference?.({
+    ScalarApiReference({
       element: document.body,
-      spec: './openapi.yaml'
+      spec: './openapi.yaml',
     });
   </script>
 </body>
