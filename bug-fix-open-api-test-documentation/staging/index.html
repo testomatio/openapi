@@ -4,15 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>OpenAPI Preview</title>
+  <script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference/dist/browser/standalone.js"></script>
   <style>
     html, body { margin: 0; padding: 0; height: 100%; }
+    #app { height: 100%; }
   </style>
 </head>
 <body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/scalar-api-reference/1.34.2/standalone.min.js"></script>
+  <!-- 🔑 Mount point -->
+  <div id="app"></div>
+
   <script>
-    Scalar.createApiReference('#app', {
-      url: './openapi.yaml'
+    window.ScalarApiReference?.({
+      element: '#app',
+      spec: './openapi.yaml'
     });
   </script>
 </body>
