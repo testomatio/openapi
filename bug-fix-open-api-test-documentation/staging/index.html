@@ -6,13 +6,9 @@
   <title>OpenAPI Preview</title>
   <script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference/dist/browser/standalone.js"></script>
   <style>
-    html, body {
+    html, body, #app {
       margin: 0;
       padding: 0;
-      height: 100%;
-      width: 100%;
-    }
-    #app {
       height: 100%;
       width: 100%;
     }
@@ -23,7 +19,7 @@
   <div id="app"></div>
 
   <script>
-    window.ScalarApiReference?.({
+    Scalar.createApiReference({
       element: '#app',
       specUrl: './openapi.yaml'
     });
