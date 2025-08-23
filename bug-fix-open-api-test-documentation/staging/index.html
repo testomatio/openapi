@@ -1,24 +1,28 @@
-  <!doctype html>
-  <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>OpenAPI Preview</title>
-    <script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference/dist/browser/standalone.js"></script>
-    <style>
-      html, body { margin: 0; padding: 0; height: 100%; }
-      #app { height: 100%; }
-    </style>
-  </head>
-  <body>
-    <!-- 🔑 Mount point -->
-    <div id="app"></div>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OpenAPI Preview</title>
+  <script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference/dist/browser/standalone.js"></script>
+  <style>
+    html, body, #app {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <!-- 🔑 Mount point -->
+  <div id="app"></div>
 
-    <script>
-      window.ScalarApiReference?.({
-        element: '#app',
-        specUrl: './openapi.yaml'
-      });
-    </script>
-  </body>
-  </html>
+  <script>
+    window.ScalarApiReference?.({
+      element: '#app',
+      specUrl: './openapi.yaml'
+    });
+  </script>
+</body>
+</html>
